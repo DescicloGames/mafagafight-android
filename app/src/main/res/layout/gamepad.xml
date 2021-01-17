@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20">
+
+        <ImageView
+            android:id="@+id/LB"
+            android:src="@drawable/ic_gamepad_lb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+
+        <ImageView
+            android:id="@+id/RB"
+            android:src="@drawable/ic_gamepad_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:gravity="bottom"
+        android:padding="@dimen/gamepad_border">
+
+        <com.erz.joysticklibrary.JoyStick
+            android:id="@+id/LS"
+            android:layout_width="@dimen/joystick_size"
+            android:layout_height="@dimen/joystick_size"
+            app:padColor="#87000000"
+            app:buttonColor="#87FFFFFF"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="233dp"
+            android:layout_height="136dp"
+            android:layout_marginBottom="@dimen/buttons_margin">
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
