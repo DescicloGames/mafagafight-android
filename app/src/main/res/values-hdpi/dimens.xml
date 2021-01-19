@@ -3,4 +3,5 @@
     <dimen name="gamepad_border">5dp</dimen>
     <dimen name="joystick_size">180dp</dimen>
     <dimen name="buttons_margin">50dp</dimen>
+    <dimen name="joystick_margin">10dp</dimen>
 </resources>
