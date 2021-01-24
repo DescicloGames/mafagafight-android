@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         ScreenUtils.setImmersiveMode(this);
         prepareWebView();
         load();
-        setupGamepad();
+        //setupGamepad();
     }
 
     @Override
@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint({"SetJavaScriptEnabled", "AddJavascriptInterface"})
     public void prepareWebView() {
         jogo = findViewById(R.id.GAME_FRAME);
-        jogo.setFocusable(true);
-        jogo.requestFocus();
+        //jogo.setFocusable(true);
+        //jogo.requestFocus();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            jogo.setFocusedByDefault(true);
+            //jogo.setFocusedByDefault(true);
         }
 
         //configuração do navegador
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void load() {
         if (Global.DEBUG) {
-            jogo.loadUrl("https://desciclogames.github.io/mafagafight");
+            jogo.loadUrl("file:///android_asset/test-device.html"); //https://desciclogames.github.io/mafagafight
         }
     }
 

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+  </head>
+  <body class="window" style="
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  ">
+    <ul class="tree-view" style="position:absolute;overflow-y: auto;overflow-x:auto;height: calc(100% - 19px);width: calc(100% - 19px);">
+      <details>
+        <summary>CPU</summary>
+        <ul>
+          <li>
+            <div class="field-row" style="width:100%">
+              <input id="CPU.benchmarkMode" style="width:100%" type="checkbox">
+              <label for="CPU.benchmarkMode" style="width:100%">Modo Benchmark</label>
+            </div>
+          </li>
+          <li>
+            <div class="field-row" style="width:100%">
+              <label for="CPU.benchmarkModifier" style="width:50%">Modificador Benchmark</label>
+              <input id="CPU.benchmarkModifier" style="width:50%" min="1" max="100" type="number" disabled>
+            </div>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>Vibração</summary>
+        <ul>
+          <li>
+            <div class="field-row" style="width:100%">
+              <label for="Vibration.canDeviceVibrate" style="width:50%">Estado do Dispositivo</label>
+              <input id="Vibration.canDeviceVibrate" style="width:50%" value="offline" readonly>
+            </div>
+          </li>
+          <li>
+            <div class="field-row" style="width:100%">
+              <label for="Vibration.canControllerVibrate" style="width:50%">Estado do Controle</label>
+              <input id="Vibration.canControllerVibrate" style="width:50%" value="offline" readonly>
+            </div>
+          </li>
+          <li>
+            <div class="field-row" style="width:100%">
+              <label for="Vibration.vibrationSetting" style="width:50%">Estado do Controle</label>
+              <select id="Vibration.vibrationSetting" style="width:50%">
+                <option title="desligado">desligado</option>
+                <option disabled title="Usa a fase única do dispositivo">monofásico (dispositivo)</option>
+                <option disabled title="Caso o controle possua duas fases, este simulará uma única fase.">monofásico (controle)</option>
+                <option disabled title="Usa todas as fases possíveis para simular uma única fase.
+Pode aumentar o consumo de bateria consideravelmente ou causar desconforto.">monofásico (dispositivo + controle)</option>
+                <option disabled title="Usa as duas fases do controle (esquerda e direita).">bifásico (controle)</option>
+                <option disabled title="Usa as duas fases do controle como uma só (trás), e o dispositivo (frente).">bifásico (dispositivo + controle)</option>
+                <option disabled title="Usa todas as fases separadamente, proporcionando uma vibração para cada direção.">trifásico (dispositivo + controle)</option>
+              </select>
+            </div>
+          </li>
+          <li>
+            <details>
+              <summary>Teste</summary>
+              <ul>
+                <li>
+                  <div class="field-row" style="width:100%">
+                    <label for="Vibration.Test.vibrateUp" style="width:50%">Vibrar para cima</label>
+                    <button id="Vibration.Test.vibrateUp" style="width:50%" disabled><u>T</u>estar</button>
+                  </div>
+                </li>
+                <li>
+                  <div class="field-row" style="width:100%">
+                    <label for="Vibration.Test.vibrateDown" style="width:50%">Vibrar para baixo</label>
+                    <button id="Vibration.Test.vibrateDown" style="width:50%" disabled><u>T</u>estar</button>
+                  </div>
+                </li>
+                <li>
+                  <div class="field-row" style="width:100%">
+                    <label for="Vibration.Test.vibrateLeft" style="width:50%">Vibrar para esquerda</label>
+                    <button id="Vibration.Test.vibrateLeft" style="width:50%" disabled><u>T</u>estar</button>
+                  </div>
+                </li>
+                <li>
+                  <div class="field-row" style="width:100%">
+                    <label for="Vibration.Test.vibrateRight" style="width:50%">Vibrar para direita</label>
+                    <button id="Vibration.Test.vibrateRight" style="width:50%" disabled><u>T</u>estar</button>
+                  </div>
+                </li>
+                <li>
+                  <div class="field-row" style="width:100%">
+                    <label for="Vibration.Test.vibrateAll" style="width:50%">Vibrar tudo</label>
+                    <button id="Vibration.Test.vibrateAll" style="width:50%" disabled><u>T</u>estar</button>
+                  </div>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>Hardware</summary>
+        <ul>
+          <details>
+            <summary>LED</summary>
+            <ul>
+              <li>
+                <div class="field-row" style="width:100%">
+                  <input id="Hardware.LED.enable" style="width:100%" type="checkbox">
+                  <label for="Hardware.LED.enable" style="width:100%">Ativar LED</label>
+                </div>
+              </li>
+              <li>
+                <div class="field-row" style="width:100%">
+                  <label for="Hardware.LED.test" style="width:50%">Testar LED</label>
+                  <button id="Hardware.LED.test" style="width:50%" disabled><u>T</u>estar</button>
+                </div>
+              </li>
+            </ul>
+          </details>
+        </ul>
+      </details>
+    </ul>
+
+    <script src="test-device.js"></script>
+  </body>
+</html>
